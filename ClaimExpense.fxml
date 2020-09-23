@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="expenseClaims.ClaimExpenseController">
+<fx:define>
+    
+    <Insets fx:id="nodeMargins" bottom="10.0" left="10.0" right ="10.0" top="10.0"/>
+</fx:define>
+
+<top>
+<GridPane vgap="5" hgap="5" BorderPane.margin="$nodeMargins">
+<columnConstraints>
+<ColumnConstraints percentWidth="65.0" />
+<ColumnConstraints percentWidth="35.0" />
+
+</columnConstraints>
+<children>
+        <Label fx:id="lblblank" GridPane.rowIndex="1" GridPane.columnIndex="0" BorderPane.margin="$nodeMargins" />
+         <Label fx:id="lblblank1" GridPane.rowIndex="2" GridPane.columnIndex="0" BorderPane.margin="$nodeMargins" />
+      
+     
+      <VBox GridPane.rowIndex="1" GridPane.columnIndex="0">
+            
+                  <children>
+                 <Label fx:id="lblEmpName" BorderPane.margin="$nodeMargins" /> 
+        <TextField fx:id="txtEmpName"  BorderPane.margin="$nodeMargins"/> 
+        <Label fx:id="lblClaimAmt" BorderPane.margin="$nodeMargins" />
+        <TextField fx:id="txtClaimAmt"  BorderPane.margin="$nodeMargins"/> 
+        <Label fx:id="lblAmtRcv" BorderPane.margin="$nodeMargins"/> 
+        <Label fx:id="lblRecAmt" BorderPane.margin="$nodeMargins"/>
+         </children>
+                 
+    
+            
+     </VBox>
+          <Button fx:id="btnEdit" text="Calculate"  GridPane.rowIndex="4" GridPane.columnIndex="0" onAction="#calculate" mnemonicParsing="true"/>
+        <Button fx:id="btnExit" text="Exit"  GridPane.rowIndex="4" GridPane.columnIndex="1" onAction="#exit" mnemonicParsing="true"/> 
+         
+        
+        
+</children>
+     
+
+
+</GridPane>
+
+  
+</top>
+</BorderPane>
+
